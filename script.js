@@ -7,13 +7,28 @@ for (let i = 0; i < 16; i++) {
     for (let j = 0; j < 16; j++) {
         var colDiv =  document.createElement('div');
         colDiv.className = 'grid-element';
-        colDiv.id = 'r' + i + 'c' + j;
-        /*
         rowDiv.appendChild(colDiv);
-        var box = document.querySelector('#r' + i + 'c' + j);
-        box.addEventListener('mouseover', () => {
-            gridElement.style.backgroundColor = 'gray';
-        });
-        */
     }
 }
+
+const gridElement = document.querySelectorAll('.grid-element');
+
+gridElement.forEach(item => {
+    item.addEventListener('mouseover', () => {
+        item.style.backgroundColor = 'white';
+    });
+  });
+
+
+
+function reset() {
+    gridElement.forEach(item => {
+        item.style.backgroundColor = 'black'
+    })
+}
+
+const resetButton = document.querySelector('#reset');
+
+resetButton.addEventListener('click', () => {
+    reset();
+});

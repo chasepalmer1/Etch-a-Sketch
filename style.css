@@ -49,3 +49,28 @@ body {
     border-style: groove;
 
 }
+
+#bottom-row {
+    display: flex;
+    background-color: white;
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    border-style: solid;
+    border-bottom: black;
+    border-width: 3px;
+}
+
+#reset {
+    background-color: blue;
+    color: white;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 6px;
+    font-size: 40px;
+}
